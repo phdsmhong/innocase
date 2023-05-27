@@ -5,8 +5,3 @@ hnswlib
 chromadb
 tiktoken==0.4.0
 streamlit-chat
-##################
-unstructured
-beautifulsoup4
-python-magic-bin
-python-magic

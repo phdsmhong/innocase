@@ -92,8 +92,8 @@ url = "https://platform.openai.com/account/api-keys"
 st.markdown("""
 InnoCase AI는 한국 정부의 혁신사례를 학습한 생성형 AI입니다.  \
 현재는 한국 정부, 공공기관, 지자체의 일부 혁신 사례만을 학습하였습니다만, 향후 전세계 정부와 비영리부문의 사례까지 \
-그 학습 범위를 확장할 계획입니다.
-""")
+그 학습 범위를 확장할 계획입니다. InnoCase AI를 사용하시려면 OpenAI 유료계정과 API Key를 생성하시기 바랍니다. [API Key 생성하러 가기](%s)
+""" % url)
 ################################
 #https://medium.com/@shashankvats/building-a-wikipedia-search-engine-with-langchain-and-streamlit-d63cb11181d0
 
@@ -107,14 +107,12 @@ embeddings_flag = False
 #https://pub.towardsai.net/building-a-q-a-bot-over-private-documents-with-openai-and-langchain-be975559c1e8
 #chromadb 이슈는 아래 참조
 #https://github.com/pypa/packaging-problems/issues/648
-#st.markdown("---")
-#st.markdown("OpenAI API Key를 입력해주세요 (API Key는 sk-로 시작합니다)")
-import config
-##################################################
-#openai_key = st.text_input(label=" ", label_visibility="collapsed")
-os.environ["OPENAI_API_KEY"] = config.api_key
+st.markdown("---")
+st.markdown("OpenAI API Key를 입력해주세요 (API Key는 sk-로 시작합니다)")
+openai_key = st.text_input(label=" ", label_visibility="collapsed")
+os.environ["OPENAI_API_KEY"] = openai_key
 
-if len(config.api_key):
+if len(openai_key):
     model_id = "gpt-3.5-turbo"
     #model_id = "gpt-4"
     llm=ChatOpenAI(model_name = model_id, temperature=0.2)

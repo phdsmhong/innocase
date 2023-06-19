@@ -78,7 +78,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 #########################################################################
 # LOGO
 #https://pmbaumgartner.github.io/streamlitopedia/sizing-and-images.html
-image = Image.open('innocase_v2.jpg')
+#image = Image.open('innocase_v2.jpg')
+image = Image.open('innocaseGPT_v1.jpg')
 st.image(image, caption='')
 ########################
 st.markdown(""" <style> .font2 {
@@ -90,9 +91,9 @@ st.markdown(""" <style> .font2 {
 #     </style> """, unsafe_allow_html=True)
 url = "https://platform.openai.com/account/api-keys"
 st.markdown("""
-InnoCase AI는 한국 정부의 혁신사례를 학습한 생성형 AI입니다.  \
+혁신사례 GPT(InnoCase GPT)는 한국 정부의 혁신사례를 학습한 생성형 AI입니다.  \
 현재는 한국 정부, 공공기관, 지자체의 일부 혁신 사례만을 학습하였습니다만, 향후 전세계 정부와 비영리부문의 사례까지 \
-그 학습 범위를 확장할 계획입니다. InnoCase AI를 사용하시려면 OpenAI 유료계정과 API Key를 생성하시기 바랍니다. [API Key 생성하러 가기](%s)
+그 학습 범위를 확장할 계획입니다. 혁신사례 GPT(InnoCase GPT)를 사용하시려면 OpenAI 유료계정과 API Key를 생성하시기 바랍니다. [API Key 생성하러 가기](%s)
 """ % url)
 ################################
 #https://medium.com/@shashankvats/building-a-wikipedia-search-engine-with-langchain-and-streamlit-d63cb11181d0
